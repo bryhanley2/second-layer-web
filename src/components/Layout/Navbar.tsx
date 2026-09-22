@@ -18,7 +18,10 @@ export default function Navbar() {
             <span className="text-2xl font-bold text-brand-900">BryanHanley.VC</span>
           </Link>
 
-          <div className="hidden md:flex space-x-7">
+          <div className="hidden lg:flex space-x-6">
+            <Link to="/thesis" className="text-gray-700 hover:text-brand-900 font-medium transition">
+              Thesis
+            </Link>
             <Link to="/map" className="text-gray-700 hover:text-brand-900 font-medium transition">
               Second Layer Map
             </Link>

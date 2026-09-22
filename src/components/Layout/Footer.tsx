@@ -17,6 +17,11 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Explore</h4>
             <div className="space-y-2 text-gray-400">
               <div>
+                <Link to="/thesis" className="hover:text-white transition">
+                  Thesis
+                </Link>
+              </div>
+              <div>
                 <Link to="/map" className="hover:text-white transition">
                   Second Layer Map
                 </Link>

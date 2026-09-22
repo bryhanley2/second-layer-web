@@ -11,6 +11,7 @@ import WritingDetail from './pages/WritingDetail';
 import InvestmentMemos from './pages/InvestmentMemos';
 import InvestmentMemoDetail from './pages/InvestmentMemoDetail';
 import Inspirations from './pages/Inspirations';
+import Thesis from './pages/Thesis';
 import About from './pages/About';
 import { isAuthenticated } from './lib/supabase';
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/map" element={<SecondLayerMap />} />
+            <Route path="/thesis" element={<Thesis />} />
             <Route path="/writings" element={<Writings />} />
             <Route path="/writings/:slug" element={<WritingDetail />} />
             <Route path="/memos" element={<InvestmentMemos />} />
