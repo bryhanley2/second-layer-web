@@ -7,6 +7,10 @@ const RECOMMENDATION_KLASS: Record<string, string> = {
   Pass: 'bg-gray-100 text-gray-600 border-gray-300',
 };
 
+// See InvestmentMemos.tsx — companies also independently found by the
+// automated pipeline's own scrape targets.
+const CONVERGENT_SLUGS = new Set(['glacian-technologies', 'capezero']);
+
 export default function InvestmentMemoDetail() {
   const { slug } = useParams();
   const memo = investmentMemos.find((m) => m.slug === slug);
@@ -40,6 +44,12 @@ export default function InvestmentMemoDetail() {
         <div className="text-gray-500 mt-2">
           {memo.industry} &middot; {memo.stage} &middot; {memo.location}
         </div>
+        {CONVERGENT_SLUGS.has(memo.slug) && (
+          <p className="text-sm text-brand-700 mt-3">
+            Also surfaced independently by the automated{' '}
+            <Link to="/map" className="underline hover:text-brand-900">Second Layer Map</Link>.
+          </p>
+        )}
 
         <div className="bg-white rounded-xl border border-gray-200 p-6 mt-6 grid gap-4 sm:grid-cols-2">
           <div>
