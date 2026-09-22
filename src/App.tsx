@@ -6,6 +6,8 @@ import Login from './pages/Login';
 import Dealflow from './pages/Dealflow';
 import RequestAccess from './pages/RequestAccess';
 import SecondLayerMap from './pages/SecondLayerMap';
+import Writings from './pages/Writings';
+import WritingDetail from './pages/WritingDetail';
 import About from './pages/About';
 import { isAuthenticated } from './lib/supabase';
 
@@ -19,6 +21,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/map" element={<SecondLayerMap />} />
+            <Route path="/writings" element={<Writings />} />
+            <Route path="/writings/:slug" element={<WritingDetail />} />
             <Route path="/about" element={<About />} />
             {/* Not a redirect: unauthenticated visitors get the request-access page. */}
             <Route path="/dealflow" element={isAuthenticated() ? <Dealflow /> : <RequestAccess />} />
