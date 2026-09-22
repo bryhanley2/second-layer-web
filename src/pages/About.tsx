@@ -42,20 +42,6 @@ export default function About() {
             be the ones who capitalize.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 pt-2">Day job</h2>
-          <p>
-            Day to day, I&rsquo;m the Operations and Strategy Lead at Gateway Checker, a
-            Boston-based pharmaceutical compliance software startup providing product
-            verification, traceability, and supply chain integrity solutions for
-            pharmaceutical trade partners. I help oversee the relationship between
-            hundreds of pharmaceutical stakeholders and lead go-to-market strategy for new
-            product offerings.
-          </p>
-          <p>
-            I graduated from Babson College in 2024, summa cum laude, with a Bachelor of
-            Science in Business Administration.
-          </p>
-
           <h2 className="text-2xl font-bold text-gray-900 pt-2">The engine and the cockpit</h2>
           <p>
             This site has two parts. The <strong>pipeline</strong> is the engine — a
