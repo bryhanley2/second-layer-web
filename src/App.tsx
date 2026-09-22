@@ -10,6 +10,7 @@ import Writings from './pages/Writings';
 import WritingDetail from './pages/WritingDetail';
 import InvestmentMemos from './pages/InvestmentMemos';
 import InvestmentMemoDetail from './pages/InvestmentMemoDetail';
+import Inspirations from './pages/Inspirations';
 import About from './pages/About';
 import { isAuthenticated } from './lib/supabase';
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/writings/:slug" element={<WritingDetail />} />
             <Route path="/memos" element={<InvestmentMemos />} />
             <Route path="/memos/:slug" element={<InvestmentMemoDetail />} />
+            <Route path="/inspirations" element={<Inspirations />} />
             <Route path="/about" element={<About />} />
             {/* Not a redirect: unauthenticated visitors get the request-access page. */}
             <Route path="/dealflow" element={isAuthenticated() ? <Dealflow /> : <RequestAccess />} />
