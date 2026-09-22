@@ -8,6 +8,11 @@ const RECOMMENDATION_KLASS: Record<string, string> = {
   Pass: 'bg-gray-100 text-gray-600 border-gray-300',
 };
 
+// Memos independently corroborated by the automated pipeline's own scrape
+// targets (see vertical_sources.py) — genuine convergent validation, not
+// just a thematic fit.
+const CONVERGENT_SLUGS = new Set(['glacian-technologies', 'capezero']);
+
 export default function InvestmentMemos() {
   const [industry, setIndustry] = useState<Industry | 'All'>('All');
 
@@ -24,6 +29,14 @@ export default function InvestmentMemos() {
           Hand-written deep dives on individual companies — market opportunity, team
           strength, competitive positioning, and growth potential. The counterpart to the
           pipeline: it screens at scale, this is what a close look looks like.
+        </p>
+        <p className="text-gray-500 text-sm mt-2 max-w-2xl">
+          For the automated version — one thesis, live, self-refreshing — see the{' '}
+          <Link to="/map" className="text-brand-700 hover:text-brand-900 font-medium">
+            Second Layer Map
+          </Link>
+          . Two AI Infrastructure memos below (Glacian Technologies, CapeZero) were
+          independently surfaced by that pipeline too.
         </p>
 
         <div className="flex flex-wrap gap-2 mt-8">
@@ -60,6 +73,11 @@ export default function InvestmentMemos() {
               </div>
               <div className="text-sm text-gray-500 mt-0.5">Total raised: {memo.totalRaised}</div>
               <p className="text-gray-600 text-sm mt-3 leading-relaxed">{memo.excerpt}</p>
+              {CONVERGENT_SLUGS.has(memo.slug) && (
+                <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-200 mt-3">
+                  Also surfaced by the Second Layer Map
+                </span>
+              )}
             </Link>
           ))}
           {shown.length === 0 && (

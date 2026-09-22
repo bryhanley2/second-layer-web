@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getSecondLayerMap, MapTrend, MapLayer } from '../lib/map';
 
 export default function SecondLayerMap() {
@@ -73,9 +74,16 @@ export default function SecondLayerMap() {
           filings, and sector press — then checked against the thesis. Inclusion is not an
           endorsement.
         </p>
-        <p className="text-gray-500 text-sm max-w-2xl mb-10">
+        <p className="text-gray-500 text-sm max-w-2xl mb-2">
           This is a curated selection — the top companies per layer. The full ranked
           dealflow, the watchlist, and the company-check agent are private.
+        </p>
+        <p className="text-gray-500 text-sm max-w-2xl mb-10">
+          This map is the automated arm. For hand-written deep dives across every
+          sector — not just this thesis — see{' '}
+          <Link to="/memos" className="text-brand-700 hover:text-brand-900 font-medium">
+            Investment Memos
+          </Link>.
         </p>
 
         {loading && <p className="text-gray-500">Loading the map…</p>}
