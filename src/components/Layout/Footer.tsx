@@ -32,6 +32,11 @@ export default function Footer() {
                 </Link>
               </div>
               <div>
+                <Link to="/inspirations" className="hover:text-white transition">
+                  Inspirations
+                </Link>
+              </div>
+              <div>
                 <Link to="/about" className="hover:text-white transition">
                   About
                 </Link>
