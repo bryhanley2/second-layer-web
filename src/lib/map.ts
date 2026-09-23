@@ -6,6 +6,7 @@ export interface MapCompany {
   blurb: string;
   stage: string;
   website: string;
+  founders: string;
 }
 
 export interface MapLayer {
