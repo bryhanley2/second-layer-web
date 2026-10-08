@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import { posts } from '../data/writings';
+import PageHeader from '../components/Layout/PageHeader';
 
 function formatDate(iso: string) {
   return new Date(iso + 'T00:00:00').toLocaleDateString('en-US', {
-    month: 'short', day: 'numeric', year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
   });
 }
 
@@ -11,37 +14,38 @@ export default function Writings() {
   const sorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-gray-900">Writings</h1>
-        <p className="text-gray-600 mt-3 max-w-2xl">
-          Essays and notes on venture capital craft — thinking out loud, including the
-          build log of this pipeline itself.
-        </p>
+    <div>
+      <PageHeader eyebrow="Writings" title={<>Essays on venture capital craft — <em className="text-accent">thinking out loud.</em></>}>
+        Including the build log of this pipeline itself, from the first rubric to the
+        engine you&rsquo;re looking at.
+      </PageHeader>
 
-        <div className="grid gap-6 sm:grid-cols-2 mt-10">
+      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-16">
+        <div className="border-t border-ink">
           {sorted.map((post) => (
             <Link
               key={post.slug}
               to={`/writings/${post.slug}`}
-              className="block bg-white rounded-xl border border-gray-200 p-6 hover:border-brand-400 transition"
+              className="group grid md:grid-cols-12 gap-3 md:gap-8 py-9 border-b border-rule"
             >
-              <div className="text-xs text-gray-400">
-                {formatDate(post.date)} &middot; {post.readingTime}
+              <span className="mono text-gray-500 md:col-span-2 md:pt-2">{formatDate(post.date)}</span>
+              <div className="md:col-span-8">
+                <h2 className="font-display text-3xl md:text-4xl leading-tight group-hover:text-accent transition-colors">
+                  {post.title}
+                </h2>
+                <p className="text-gray-600 mt-3 leading-relaxed max-w-2xl">{post.excerpt}</p>
+                <p className="mono text-gray-400 mt-4">{post.tags.join(' · ')}</p>
               </div>
-              <h2 className="text-lg font-bold text-gray-900 mt-2">{post.title}</h2>
-              <p className="text-gray-600 text-sm mt-2 leading-relaxed">{post.excerpt}</p>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {post.tags.map((t) => (
-                  <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
-                    {t}
-                  </span>
-                ))}
-              </div>
+              <span className="mono text-gray-500 md:col-span-2 md:text-right md:pt-2">
+                {post.readingTime}
+                <span className="text-accent ml-2 inline-block transition-transform group-hover:translate-x-1" aria-hidden="true">
+                  &rarr;
+                </span>
+              </span>
             </Link>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }

@@ -1,5 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import { books, podcasts, articles, type Resource } from '../data/inspirations';
+import PageHeader from '../components/Layout/PageHeader';
 
 type Tab = 'Books' | 'Podcasts' | 'Articles';
 type CategoryFilter = 'All' | 'venture' | 'psychology';
@@ -8,6 +9,22 @@ const CATEGORY_LABEL: Record<Exclude<CategoryFilter, 'All'>, string> = {
   venture: 'Venture & Finance',
   psychology: 'Psychology & Memoir',
 };
+
+function BracketToggle({ active, onClick, children }: { active: boolean; onClick: () => void; children: ReactNode }) {
+  return (
+    <button
+      onClick={onClick}
+      aria-pressed={active}
+      className={`mono uppercase tracking-[0.1em] text-[0.7rem] transition-colors ${
+        active ? 'text-ink' : 'text-gray-400 hover:text-ink'
+      }`}
+    >
+      <span className={`text-accent ${active ? 'opacity-100' : 'opacity-0'}`}>[</span>
+      {children}
+      <span className={`text-accent ${active ? 'opacity-100' : 'opacity-0'}`}>]</span>
+    </button>
+  );
+}
 
 export default function Inspirations() {
   const [tab, setTab] = useState<Tab>('Books');
@@ -18,24 +35,23 @@ export default function Inspirations() {
     [category],
   );
 
-  return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-gray-900">Inspirations</h1>
-        <p className="text-gray-600 mt-3 max-w-2xl">
-          Curated books, podcasts, and articles that inform my perspective on venture
-          capital.
-        </p>
+  const list = tab === 'Books' ? shownBooks : tab === 'Podcasts' ? podcasts : articles;
 
-        <div className="flex gap-2 mt-8 border-b border-gray-200">
+  return (
+    <div>
+      <PageHeader eyebrow="Inspirations" title={<>What shapes <em className="text-accent">the thinking.</em></>}>
+        Curated books, podcasts, and articles that inform my perspective on venture
+        capital.
+      </PageHeader>
+
+      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-14">
+        <div className="flex flex-wrap items-baseline gap-x-8 gap-y-4 border-b border-ink pb-4">
           {(['Books', 'Podcasts', 'Articles'] as Tab[]).map((t) => (
             <button
               key={t}
               onClick={() => setTab(t)}
-              className={`px-4 py-2.5 text-sm font-semibold border-b-2 -mb-px transition ${
-                tab === t
-                  ? 'border-brand-900 text-brand-900'
-                  : 'border-transparent text-gray-500 hover:text-gray-700'
+              className={`font-display text-3xl transition-colors ${
+                tab === t ? 'text-ink' : 'text-gray-300 hover:text-gray-500'
               }`}
             >
               {t}
@@ -44,55 +60,45 @@ export default function Inspirations() {
         </div>
 
         {tab === 'Books' && (
-          <>
-            <div className="flex flex-wrap gap-2 mt-6">
-              {(['All', 'venture', 'psychology'] as CategoryFilter[]).map((c) => (
-                <button
-                  key={c}
-                  onClick={() => setCategory(c)}
-                  className={`text-sm px-3 py-1.5 rounded-full border transition ${
-                    category === c
-                      ? 'bg-brand-900 text-white border-brand-900'
-                      : 'border-gray-300 text-gray-600 hover:border-brand-400'
-                  }`}
-                >
-                  {c === 'All' ? 'All' : CATEGORY_LABEL[c]}
-                </button>
-              ))}
-            </div>
-            <ResourceGrid resources={shownBooks} />
-          </>
-        )}
-        {tab === 'Podcasts' && <ResourceGrid resources={podcasts} />}
-        {tab === 'Articles' && <ResourceGrid resources={articles} />}
-      </div>
-    </div>
-  );
-}
-
-function ResourceGrid({ resources }: { resources: Resource[] }) {
-  return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-6">
-      {resources.map((r) => {
-        const inner = (
-          <>
-            <h3 className="font-bold text-gray-900 leading-snug">{r.title}</h3>
-            {r.byline && <p className="text-sm text-gray-500 mt-1">{r.byline}</p>}
-            {r.note && <p className="text-sm text-gray-600 mt-2 leading-relaxed">{r.note}</p>}
-          </>
-        );
-        const cls = 'block bg-white rounded-xl border border-gray-200 p-5' +
-          (r.url ? ' hover:border-brand-400 transition' : '');
-        return r.url ? (
-          <a key={r.title} href={r.url} target="_blank" rel="noreferrer" className={cls}>
-            {inner}
-          </a>
-        ) : (
-          <div key={r.title} className={cls}>
-            {inner}
+          <div className="flex flex-wrap gap-x-6 gap-y-3 mt-6">
+            {(['All', 'venture', 'psychology'] as CategoryFilter[]).map((c) => (
+              <BracketToggle key={c} active={category === c} onClick={() => setCategory(c)}>
+                {c === 'All' ? 'All' : CATEGORY_LABEL[c]}
+              </BracketToggle>
+            ))}
           </div>
-        );
-      })}
+        )}
+
+        <ul className="mt-6">
+          {list.map((r: Resource, i) => {
+            const body = (
+              <>
+                <span className="mono text-gray-400 md:col-span-1">{String(i + 1).padStart(2, '0')}</span>
+                <span className="md:col-span-6">
+                  <span className="block font-display text-2xl md:text-[1.7rem] leading-tight group-hover:text-accent transition-colors">
+                    {r.title}
+                  </span>
+                  {r.byline && <span className="mono text-gray-500 block mt-2">{r.byline}</span>}
+                </span>
+                <span className="md:col-span-5 text-gray-600 text-[0.95rem] leading-relaxed">
+                  {r.note}
+                  {r.url && <span className="text-accent ml-1" aria-hidden="true">↗</span>}
+                </span>
+              </>
+            );
+            const cls = 'group grid md:grid-cols-12 gap-3 md:gap-8 py-6 border-b border-rule items-baseline';
+            return (
+              <li key={r.title}>
+                {r.url ? (
+                  <a href={r.url} target="_blank" rel="noreferrer" className={cls}>{body}</a>
+                ) : (
+                  <div className={cls}>{body}</div>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </section>
     </div>
   );
 }

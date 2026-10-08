@@ -20,14 +20,17 @@ export default function Dealflow() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        <header>
-          <h1 className="text-4xl font-bold text-gray-900">Dealflow</h1>
-          <p className="text-gray-600 mt-2 max-w-2xl">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 space-y-10">
+        <header className="pt-16 pb-6 border-b border-rule">
+          <p className="eyebrow">[ Dealflow — private ]</p>
+          <h1 className="font-display text-5xl sm:text-7xl leading-[0.96] mt-5">
+            The working <em className="text-accent">surface.</em>
+          </h1>
+          <p className="text-gray-600 text-lg mt-6 max-w-2xl leading-relaxed">
             Seed-stage companies surfaced and screened by the Second Layer pipeline —
-            an AI agent that sources from specialist fund portfolios, verifies funding
-            against citable sources, and scores against the thesis.
+            sourced from specialist fund portfolios, funding verified against citable
+            sources, scored against the thesis.
           </p>
         </header>
 

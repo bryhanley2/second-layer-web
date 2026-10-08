@@ -1,17 +1,8 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { investmentMemos, INDUSTRIES, type Industry } from '../data/investment-memos';
-
-const RECOMMENDATION_KLASS: Record<string, string> = {
-  Invest: 'bg-green-100 text-green-800 border-green-300',
-  'Further Review': 'bg-amber-100 text-amber-800 border-amber-300',
-  Pass: 'bg-gray-100 text-gray-600 border-gray-300',
-};
-
-// Memos independently corroborated by the automated pipeline's own scrape
-// targets (see vertical_sources.py) — genuine convergent validation, not
-// just a thematic fit.
-const CONVERGENT_SLUGS = new Set(['glacian-technologies', 'capezero']);
+import PageHeader from '../components/Layout/PageHeader';
+import { REC_KLASS, CONVERGENT_SLUGS } from '../lib/memoMeta';
 
 export default function InvestmentMemos() {
   const [industry, setIndustry] = useState<Industry | 'All'>('All');
@@ -22,69 +13,75 @@ export default function InvestmentMemos() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-gray-900">Investment Memos</h1>
-        <p className="text-gray-600 mt-3 max-w-2xl">
-          Hand-written deep dives on individual companies — market opportunity, team
-          strength, competitive positioning, and growth potential. The counterpart to the
-          pipeline: it screens at scale, this is what a close look looks like.
+    <div>
+      <PageHeader eyebrow="Investment memos" title={<>A close look, <em className="text-accent">written by hand.</em></>}>
+        <p>
+          Deep dives on individual companies — market, team, positioning, growth. The
+          counterpart to the pipeline: it screens at scale; this is what a close look
+          looks like.
         </p>
-        <p className="text-gray-500 text-sm mt-2 max-w-2xl">
+        <p className="text-sm text-gray-500 mt-4">
           For the automated version — one thesis, live, self-refreshing — see the{' '}
-          <Link to="/map" className="text-brand-700 hover:text-brand-900 font-medium">
-            Second Layer Map
-          </Link>
-          . Two AI Infrastructure memos below (Glacian Technologies, CapeZero) were
-          independently surfaced by that pipeline too.
+          <Link to="/map" className="text-accent-dark link-slide">Second Layer Map</Link>. Two
+          AI Infrastructure memos here (Glacian Technologies, CapeZero) were independently
+          surfaced by that pipeline too.
         </p>
+      </PageHeader>
 
-        <div className="flex flex-wrap gap-2 mt-8">
-          {(['All', ...INDUSTRIES] as const).map((ind) => (
-            <button
-              key={ind}
-              onClick={() => setIndustry(ind)}
-              className={`text-sm px-3 py-1.5 rounded-full border transition ${
-                industry === ind
-                  ? 'bg-brand-900 text-white border-brand-900'
-                  : 'border-gray-300 text-gray-600 hover:border-brand-400'
-              }`}
-            >
-              {ind}
-            </button>
-          ))}
+      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-14">
+        <div className="flex flex-wrap gap-x-6 gap-y-3 mb-10" role="tablist" aria-label="Filter by industry">
+          {(['All', ...INDUSTRIES] as const).map((ind) => {
+            const active = industry === ind;
+            return (
+              <button
+                key={ind}
+                role="tab"
+                aria-selected={active}
+                onClick={() => setIndustry(ind)}
+                className={`mono uppercase tracking-[0.1em] text-[0.7rem] transition-colors ${
+                  active ? 'text-ink' : 'text-gray-400 hover:text-ink'
+                }`}
+              >
+                <span className={`text-accent ${active ? 'opacity-100' : 'opacity-0'}`}>[</span>
+                {ind}
+                <span className={`text-accent ${active ? 'opacity-100' : 'opacity-0'}`}>]</span>
+              </button>
+            );
+          })}
         </div>
 
-        <div className="space-y-4 mt-8">
+        <div className="border-t border-ink">
           {shown.map((memo) => (
             <Link
               key={memo.slug}
               to={`/memos/${memo.slug}`}
-              className="block bg-white rounded-xl border border-gray-200 p-6 hover:border-brand-400 transition"
+              className="group grid md:grid-cols-12 gap-3 md:gap-8 py-8 border-b border-rule items-baseline"
             >
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <h2 className="text-lg font-bold text-gray-900">{memo.company}</h2>
-                <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${RECOMMENDATION_KLASS[memo.recommendation]}`}>
-                  {memo.recommendation}
-                </span>
+              <div className="md:col-span-4">
+                <h2 className="font-display text-3xl leading-tight group-hover:text-accent transition-colors">
+                  {memo.company}
+                </h2>
+                <p className="mono text-gray-500 mt-2">
+                  {memo.industry} · {memo.stage}
+                </p>
               </div>
-              <div className="text-sm text-gray-500 mt-1">
-                {memo.industry} &middot; {memo.stage} &middot; {memo.location}
+              <div className="md:col-span-5">
+                <p className="text-gray-600 leading-relaxed text-[0.95rem]">{memo.excerpt}</p>
+                {CONVERGENT_SLUGS.has(memo.slug) && (
+                  <p className="mono text-accent mt-3">&bull; Also surfaced by the Second Layer Map</p>
+                )}
               </div>
-              <div className="text-sm text-gray-500 mt-0.5">Total raised: {memo.totalRaised}</div>
-              <p className="text-gray-600 text-sm mt-3 leading-relaxed">{memo.excerpt}</p>
-              {CONVERGENT_SLUGS.has(memo.slug) && (
-                <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-200 mt-3">
-                  Also surfaced by the Second Layer Map
-                </span>
-              )}
+              <div className="md:col-span-3 md:text-right">
+                <p className={`mono uppercase tracking-[0.1em] ${REC_KLASS[memo.recommendation]}`}>
+                  &bull; {memo.recommendation}
+                </p>
+                <p className="mono text-gray-500 mt-2">{memo.totalRaised}</p>
+              </div>
             </Link>
           ))}
-          {shown.length === 0 && (
-            <p className="text-gray-500 text-sm">No memos in this industry yet.</p>
-          )}
+          {shown.length === 0 && <p className="text-gray-500 py-8">No memos in this industry yet.</p>}
         </div>
-      </div>
+      </section>
     </div>
   );
 }
