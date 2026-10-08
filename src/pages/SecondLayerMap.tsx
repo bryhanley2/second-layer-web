@@ -148,6 +148,9 @@ function LayerSection({ layer, index }: { layer: MapLayer; index: number }) {
               )}
             </div>
             <p className="text-sm text-gray-600 mt-1.5">{c.blurb}</p>
+            {c.founders && (
+              <p className="text-xs text-gray-400 mt-1.5">{c.founders}</p>
+            )}
           </div>
         ))}
       </div>

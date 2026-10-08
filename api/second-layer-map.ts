@@ -8,7 +8,7 @@ const MAP_TAB = 'Second Layer Map';
 
 type Row = Record<string, string>;
 
-interface Company { name: string; blurb: string; stage: string; website: string; }
+interface Company { name: string; blurb: string; stage: string; website: string; founders: string; }
 interface Layer { id: string; name: string; problem: string; order: number; companies: Company[]; }
 interface Trend { trend: string; trend_blurb: string; updated: string; layers: Layer[]; }
 
@@ -50,6 +50,7 @@ function toTrend(trendRows: Row[]): Trend {
       blurb: r['Blurb'] || '',
       stage: r['Stage'] || '',
       website: r['Website'] || '',
+      founders: r['Founders'] || '',
     });
   }
   return {
