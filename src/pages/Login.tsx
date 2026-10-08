@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, type FormEvent } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../lib/supabase';
 
 export default function Login() {
@@ -7,61 +7,56 @@ export default function Login() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    
+
     if (login(password)) {
       navigate('/dealflow');
     } else {
-      setError('Invalid password. Please try again.');
+      setError('That password didn’t work. Try again.');
       setPassword('');
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-brand-900 to-brand-600 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full">
-        <div className="bg-white rounded-xl shadow-2xl p-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h2>
-            <p className="text-gray-600">Enter your password to access BryanHanley.VC</p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-                Password
-              </label>
-              <input
-                id="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent"
-                placeholder="Enter your password"
-                required
-              />
-            </div>
-
-            {error && (
-              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
-                {error}
-              </div>
-            )}
-
-            <button
-              type="submit"
-              className="w-full bg-brand-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-800 transition"
-            >
-              Login
-            </button>
-          </form>
-
-          <div className="mt-6 text-center text-sm text-gray-500">
-            <p>Private access only • For authorized users</p>
-          </div>
-        </div>
+    <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28 grid md:grid-cols-12 gap-14 items-start">
+      <div className="md:col-span-6">
+        <p className="eyebrow reveal">[ Private ]</p>
+        <h1
+          className="font-display text-5xl sm:text-7xl leading-[0.96] mt-5 reveal"
+          style={{ animationDelay: '80ms' }}
+        >
+          The working <em className="text-accent">surface.</em>
+        </h1>
+        <p className="text-gray-600 text-lg leading-relaxed mt-7 max-w-md reveal" style={{ animationDelay: '200ms' }}>
+          The full ranked board and watchlist live behind a password. No password?{' '}
+          <Link to="/dealflow" className="link-slide text-accent-dark">Request access</Link>.
+        </p>
       </div>
+
+      <form
+        onSubmit={handleSubmit}
+        className="md:col-span-5 md:col-start-8 border border-ink bg-paper p-8 shadow-offset reveal"
+        style={{ animationDelay: '280ms' }}
+      >
+        <label htmlFor="password" className="eyebrow block">Password</label>
+        <input
+          id="password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="mt-3 w-full bg-transparent border-0 border-b border-ink px-0 py-3 text-lg focus:outline-none focus:border-accent"
+          placeholder="••••••••"
+          autoComplete="current-password"
+          required
+        />
+
+        {error && <p className="mono text-accent mt-4" role="alert">{error}</p>}
+
+        <button type="submit" className="btn-ink mt-8 w-full justify-center">
+          Enter <span aria-hidden="true">&rarr;</span>
+        </button>
+      </form>
     </div>
   );
 }

@@ -1,88 +1,77 @@
 import { Link } from 'react-router-dom';
 
+const EXPLORE = [
+  { to: '/thesis', label: 'Thesis' },
+  { to: '/map', label: 'Second Layer Map' },
+  { to: '/writings', label: 'Writings' },
+  { to: '/memos', label: 'Investment Memos' },
+  { to: '/inspirations', label: 'Inspirations' },
+  { to: '/dealflow', label: 'Dealflow' },
+  { to: '/about', label: 'About' },
+];
+
+const CONNECT = [
+  { href: 'https://www.linkedin.com/in/bryan-stanley-hanley/', label: 'LinkedIn', external: true },
+  { href: 'https://bryanhanley.substack.com/about', label: 'Substack', external: true },
+  { href: 'mailto:bry.hanley2@gmail.com', label: 'Email', external: false },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-ink text-paper">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-10">
+        <p className="eyebrow !text-gray-400">[ Second Layer ]</p>
+        <h2 className="font-display text-5xl md:text-7xl leading-[0.95] mt-5 max-w-4xl">
+          The trend is not the opportunity.{' '}
+          <em className="text-accent not-italic md:italic">The problems it creates are.</em>
+        </h2>
+
+        <div className="grid gap-12 md:grid-cols-3 mt-16 pt-10 border-t border-white/15">
           <div>
-            <h3 className="text-xl font-bold mb-4">BryanHanley.VC</h3>
-            <p className="text-gray-400">
-              Second Layer sourcing — backing the companies that solve the problems a
-              dominant trend creates.
+            <p className="eyebrow !text-gray-400 mb-4">Index</p>
+            <ul className="space-y-2.5">
+              {EXPLORE.map((l) => (
+                <li key={l.to}>
+                  <Link
+                    to={l.to}
+                    className="text-gray-300 hover:text-accent transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="eyebrow !text-gray-400 mb-4">Connect</p>
+            <ul className="space-y-2.5">
+              {CONNECT.map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    className="text-gray-300 hover:text-accent transition-colors"
+                  >
+                    {l.label} <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="eyebrow !text-gray-400 mb-4">This site</p>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              A seed-stage sourcing engine and the thinking behind it. The pipeline
+              proposes; a human decides.
             </p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Explore</h4>
-            <div className="space-y-2 text-gray-400">
-              <div>
-                <Link to="/thesis" className="hover:text-white transition">
-                  Thesis
-                </Link>
-              </div>
-              <div>
-                <Link to="/map" className="hover:text-white transition">
-                  Second Layer Map
-                </Link>
-              </div>
-              <div>
-                <Link to="/writings" className="hover:text-white transition">
-                  Writings
-                </Link>
-              </div>
-              <div>
-                <Link to="/memos" className="hover:text-white transition">
-                  Investment Memos
-                </Link>
-              </div>
-              <div>
-                <Link to="/inspirations" className="hover:text-white transition">
-                  Inspirations
-                </Link>
-              </div>
-              <div>
-                <Link to="/about" className="hover:text-white transition">
-                  About
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
-            <div className="space-y-2 text-gray-400">
-              <div>
-                <a
-                  href="https://www.linkedin.com/in/bryan-stanley-hanley/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition"
-                >
-                  LinkedIn
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://bryanhanley.substack.com/about"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition"
-                >
-                  Substack
-                </a>
-              </div>
-              <div>
-                <a href="mailto:bry.hanley2@gmail.com" className="hover:text-white transition">
-                  Email
-                </a>
-              </div>
-            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>© 2026 Bryan Hanley. All rights reserved.</p>
+        <div className="mono text-gray-500 mt-16 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-3">
+          <span>&copy; {new Date().getFullYear()} Bryan Hanley</span>
+          <span>New York, USA</span>
         </div>
       </div>
     </footer>
