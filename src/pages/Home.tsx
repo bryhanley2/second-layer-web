@@ -27,7 +27,7 @@ const STEPS = [
 ];
 
 const STATS = [
-  { n: String(investmentMemos.length), label: 'Investment memos' },
+  { n: String(investmentMemos.length), label: 'Company memos' },
   { n: String(posts.length), label: 'Essays' },
   { n: '22', label: 'Verticals sourced' },
   { n: '55', label: 'Proprietary sources' },
@@ -77,7 +77,7 @@ export default function Home() {
         </h2>
         <p className="text-gray-600 mt-6 max-w-2xl text-lg leading-relaxed">
           Manual-trigger by design. It runs on demand, writes a ranked list with every
-          figure cited or flagged, and no investment decision is automated.
+          figure cited or flagged, and no decision is automated.
         </p>
 
         <div className="grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-4 mt-16">

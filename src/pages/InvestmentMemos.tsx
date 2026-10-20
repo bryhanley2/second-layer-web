@@ -14,7 +14,7 @@ export default function InvestmentMemos() {
 
   return (
     <div>
-      <PageHeader eyebrow="Investment memos" title={<>A close look, <em className="text-accent">written by hand.</em></>}>
+      <PageHeader eyebrow="Company memos" title={<>A close look, <em className="text-accent">written by hand.</em></>}>
         <p>
           Deep dives on individual companies — market, team, positioning, growth. The
           counterpart to the pipeline: it screens at scale; this is what a close look

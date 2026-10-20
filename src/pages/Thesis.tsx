@@ -24,7 +24,7 @@ const STEPS: { label: string; items: [string, string][] }[] = [
     ],
   },
   {
-    label: 'Invest',
+    label: 'Identify',
     items: [
       ['3a', 'What solutions supplement the growth of 2a?'],
       ['3b', 'What solutions mitigate the risks of 2b?'],
@@ -36,7 +36,7 @@ export default function Thesis() {
   return (
     <div>
       <PageHeader eyebrow="Thesis" title={<>The <em className="text-accent">Second Layer</em> approach.</>}>
-        A forward-looking way to source venture investments — by asking what dominant
+        A forward-looking way to source early-stage companies — by asking what dominant
         trends make inevitable, before the market recognizes it as a category.
       </PageHeader>
 
@@ -74,8 +74,8 @@ export default function Thesis() {
                     </li>
                   ))}
                 </ul>
-                {s.label === 'Invest' && (
-                  <p className="mono text-accent mt-6">&rarr; these are the investments</p>
+                {s.label === 'Identify' && (
+                  <p className="mono text-accent mt-6">&rarr; these are the companies</p>
                 )}
               </div>
             ))}
@@ -88,7 +88,7 @@ export default function Thesis() {
         <p>
           2025 was a top-heavy year — over 50% of all VC deal value came from just 0.05% of
           deals, led by decacorns like Databricks, OpenAI, SpaceX, and Anthropic. 2026 is
-          expected to bring greater deal volume and less concentration as investors shift
+          expected to bring greater deal volume and less concentration as capital shifts
           focus toward measurable outcomes over pure experimentation.
         </p>
         <p>
@@ -97,7 +97,7 @@ export default function Thesis() {
           there is more dry powder available and greater openness to diversification.
         </p>
         <p>
-          While a majority of investors center their focus on the industries AI is
+          While a majority of funders center their focus on the industries AI is
           impacting today, by taking a more forward-looking approach, the Second Layer
           Approach seeks out opportunities both with less competition and with more
           long-term runway.
@@ -130,7 +130,7 @@ export default function Thesis() {
 
       <div className="max-w-3xl mx-auto px-5 sm:px-8 pb-24 pt-8 prose-editorial">
         <p>
-          This is not compliance tech investing. It is a sourcing logic — a systematic way
+          This is not a compliance tech thesis. It is a sourcing logic — a systematic way
           of finding the companies that dominant trends make inevitable, before the broader
           market recognizes them as a category.
         </p>

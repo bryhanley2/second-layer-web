@@ -12,7 +12,8 @@ export default function About() {
       <PageHeader eyebrow="About" title={<>Bryan <em className="text-accent">Hanley.</em></>} />
 
       <div className="max-w-6xl mx-auto px-5 sm:px-8 py-16 grid md:grid-cols-12 gap-12">
-        <div className="md:col-span-8 prose-editorial">
+        <div className="md:col-span-8">
+          <div className="prose-editorial">
           <p>
             Bryan Hanley currently works as the Operations and Strategy Lead for Gateway
             Checker, a Boston-based pharmaceutical compliance software startup providing
@@ -31,8 +32,8 @@ export default function About() {
             In the meantime, Bryan is building an automated early-stage company evaluation
             platform, leveraging large language models to add efficiencies to the sourcing
             and diligences processes. Alongside the platform, Bryan is developing an
-            investment thesis centered around his &ldquo;Second Layer&rdquo; perspective,
-            which emphasizes a forward-looking approach to venture investing that considers
+            thesis centered around his &ldquo;Second Layer&rdquo; perspective,
+            which emphasizes a forward-looking approach to early-stage ventures that considers
             industries beyond the ones which are most notable today.
           </p>
           <p>
@@ -42,6 +43,19 @@ export default function About() {
             entrepreneur, or just interested in the world of startups and VC, don&rsquo;t
             hesitate to reach out.
           </p>
+
+          </div>
+
+          <aside aria-label="Disclaimer" className="mt-12 border-t border-ink pt-5">
+            <p className="eyebrow">[ Disclaimer ]</p>
+            <p className="mt-3 text-[0.9rem] leading-relaxed text-gray-500">
+              Note: The views expressed in this article are my own and are intended for
+              informational purposes only. Nothing here constitutes financial or investment
+              advice. Venture capital involves significant risk, and all investment
+              decisions should be made in consultation with a qualified financial
+              professional.
+            </p>
+          </aside>
         </div>
 
         <aside className="md:col-span-4">

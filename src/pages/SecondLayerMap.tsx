@@ -95,7 +95,7 @@ export default function SecondLayerMap() {
             A curated selection — the top companies per layer. The full ranked dealflow
             and watchlist are private. For hand-written deep dives across every sector,
             see{' '}
-            <Link to="/memos" className="link-slide text-accent-dark">Investment Memos</Link>.
+            <Link to="/memos" className="link-slide text-accent-dark">Company Memos</Link>.
           </p>
         </div>
 
