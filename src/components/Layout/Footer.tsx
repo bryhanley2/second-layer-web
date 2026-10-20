@@ -4,7 +4,7 @@ const EXPLORE = [
   { to: '/thesis', label: 'Thesis' },
   { to: '/map', label: 'Second Layer Map' },
   { to: '/writings', label: 'Writings' },
-  { to: '/memos', label: 'Company Memos' },
+  { to: '/memos', label: 'Investment Memos' },
   { to: '/inspirations', label: 'Inspirations' },
   { to: '/dealflow', label: 'Dealflow' },
   { to: '/about', label: 'About' },

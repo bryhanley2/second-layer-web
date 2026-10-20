@@ -142,7 +142,7 @@ export const investmentMemos: InvestmentMemo[] = [
     topFactors: [
       { factor: "Founder-Market Fit", rationale: "Cofounded by AJ Asver (CEO) and Miguel Rios-Berrios (CTO), both formerly of Brex, who lived the financial compliance problem directly." },
       { factor: "Market", rationale: "Fintech revenue is projected to reach $1.5 trillion by 2030; the firms driving this growth will need the compliance infrastructure to support it." },
-      { factor: "Backer Signal", rationale: "Kindred Ventures and Initialized Capital both have very strong fintech infrastructure track records — Initialized backed Coinbase and Reddit early." },
+      { factor: "Investor Signal", rationale: "Kindred Ventures and Initialized Capital both have very strong fintech infrastructure track records — Initialized invested in Coinbase and Reddit early." },
     ],
   },
   {
@@ -212,7 +212,7 @@ export const investmentMemos: InvestmentMemo[] = [
       "Trellis AI automates healthcare paperwork and prior authorization workflows for providers. It builds AI agents that process unstructured clinical documents — referrals, medical charts, insurance guidelines, appeals — converting them into structured data directly integrated into Electronic Health Record systems. By streamlining these processes, time-to-treatment is significantly reduced, allowing patients to be treated more quickly while allowing health centers to handle a higher volume of patients. The U.S. spends over a trillion dollars a year on administrative healthcare costs, delaying care, draining provider revenue, and driving staff burnout. By reducing time-to-treatment by over 90%, Trellis is tackling one of the most substantial problems facing American families today.",
     ],
     topFactors: [
-      { factor: "Backer Quality", rationale: "Backing from General Catalyst demonstrates high backer quality." },
+      { factor: "Investor Quality", rationale: "Backing from General Catalyst demonstrates high investor quality." },
       { factor: "Product-Market Fit", rationale: "Billions in annual therapy processing, nationwide scale across hundreds of locations." },
       { factor: "Technical Execution", rationale: "Clinical training on millions of data points, along with integration into EHR platforms." },
     ],
@@ -238,7 +238,7 @@ export const investmentMemos: InvestmentMemo[] = [
     topFactors: [
       { factor: "Market", rationale: "Every enterprise AI deployment needs quality assurance infrastructure." },
       { factor: "Timing", rationale: "LLM experimentation-to-production is happening fast across every enterprise." },
-      { factor: "Backer Quality", rationale: "Elevation Capital is a well-established fund with a strong enterprise track record." },
+      { factor: "Investor Quality", rationale: "Elevation Capital is a well-established fund with a strong enterprise track record." },
     ],
   },
   {
@@ -262,7 +262,7 @@ export const investmentMemos: InvestmentMemo[] = [
     topFactors: [
       { factor: "Timing & Competition", rationale: "11,000+ satellites in orbit and growing — orbital network complexity is doubling faster than legacy orchestration tools can handle. Aalyria is the only platform purpose-built for cross-constellation, cross-domain routing at this scale." },
       { factor: "Technical Execution", rationale: "Spacetime was battle-tested inside Project Loon before it was a startup. The underlying IP is more mature than nearly any other seed/Series A space software company." },
-      { factor: "Backer Signal", rationale: "Lockheed Martin as a strategic backer is a defining signal in defense-space — it confirms operational use, not just speculative interest." },
+      { factor: "Investor Signal", rationale: "Lockheed Martin as a strategic backer is a defining signal in defense-space — it confirms operational use, not just speculative interest." },
     ],
   },
   {
@@ -309,7 +309,7 @@ export const investmentMemos: InvestmentMemo[] = [
     ],
     topFactors: [
       { factor: "Market Size", rationale: "Every operational satellite is an eventual customer. The opportunity expands automatically as constellation deployment accelerates — and Orbit Fab is the only commercial in-space refueling provider with active defense contracts." },
-      { factor: "Backer Signal", rationale: "$21M in defense contracts alongside $28.5M in venture funding signals dual-track validation rare for hard-tech space companies — both private capital and government procurement see the same opportunity." },
+      { factor: "Investor Signal", rationale: "$21M in defense contracts alongside $28.5M in venture funding signals dual-track validation rare for hard-tech space companies — both private capital and government procurement see the same opportunity." },
       { factor: "Timing & Competition", rationale: "Satellite costs are falling, but launch volumes are growing faster — meaning the economic case for refueling improves with each new generation of constellations." },
     ],
   },
@@ -406,7 +406,7 @@ export const investmentMemos: InvestmentMemo[] = [
     topFactors: [
       { factor: "Market Size", rationale: "Approximately 115 million lamp posts in the US, and every urban municipality with EV adoption mandates is a potential customer. EV mandates in California, New York, and across Europe create structural demand drivers that compound annually. 40-50% of US urban households have no driveway and no home charging option." },
       { factor: "Timing & Competition", rationale: "Federal NEVI funding ($7.5B) is largely directed at highway corridors, creating a curbside funding gap that Voltpost fills. DC fast chargers cost $50K-$150K per unit and require grid upgrades; Voltpost units deploy in hours using existing electrical supply at a fraction of the cost." },
-      { factor: "Backer Signal", rationale: "RWE Energy Transition Investments (the venture arm of one of Europe's largest renewable energy utilities) led the seed round, signaling sector-specific validation rare for a hardware-first startup. The AT&T partnership (November 2024) confirms operational scale through a Fortune 500 connectivity provider." },
+      { factor: "Investor Signal", rationale: "RWE Energy Transition Investments (the venture arm of one of Europe's largest renewable energy utilities) led the seed round, signaling sector-specific validation rare for a hardware-first startup. The AT&T partnership (November 2024) confirms operational scale through a Fortune 500 connectivity provider." },
     ],
   },
   {
@@ -454,7 +454,7 @@ export const investmentMemos: InvestmentMemo[] = [
     topFactors: [
       { factor: "Founder-Market Fit", rationale: "CEO Maor Goldberg is a serial cybersecurity entrepreneur with two prior exits — Whitebox Security (acquired by SailPoint, 2015) and Apolicy (acquired by Sysdig, 2021). Co-founders Eran Leib (CCO) and Aviad Chen (VP R&D) have worked alongside Goldberg for 25+ years. This is their third startup together — rare co-founder continuity that signals deep trust and execution chemistry." },
       { factor: "Timing & Competition", rationale: "Most current tools are focused on prioritization of vulnerabilities, while Backline is actually remediating them. The detection-to-remediation shift is the emerging consensus thesis in application security, and Backline is well-positioned at the leading edge." },
-      { factor: "Backer Signal", rationale: "$9M seed led by StageOne Ventures (who also backed the team's previous startup), with participation from Evolution Equity Partners (cybersecurity specialist) and Google's Gradient Ventures. Already deployed across enterprise organizations at launch." },
+      { factor: "Investor Signal", rationale: "$9M seed led by StageOne Ventures (who also backed the team's previous startup), with participation from Evolution Equity Partners (cybersecurity specialist) and Google's Gradient Ventures. Already deployed across enterprise organizations at launch." },
     ],
   },
   {
@@ -478,7 +478,7 @@ export const investmentMemos: InvestmentMemo[] = [
     topFactors: [
       { factor: "Founder-Market Fit", rationale: "CEO Lewis Carhart, CPO Mariano Fuentes, and CTO Claudio Fuentes bring enterprise compliance experience and open-source community-building expertise. They've lived the pain of overpaying for compliance tooling firsthand — the kind of founder-problem alignment that signals they're building what they actually needed, not what they think the market wants." },
       { factor: "Product-Market Fit", rationale: "3,500+ companies in pre-launch testing program. First customers collectively saved 2,500+ hours. 89% month-over-month growth and 90% automation of the compliance process. The numbers are unusually strong for a pre-seed company and demonstrate real adoption at scale." },
-      { factor: "Backer Signal", rationale: "$2.6M pre-seed co-led by OSS Capital (open-source specialist, known for backing ProjectDiscovery, Plane, and Cal.com) and Grand Ventures. Participated in Vercel's Spring '25 Open Source Software initiative. This is the exact backer composition that successful open-source companies (MongoDB, Cloudflare) had at their earliest stages." },
+      { factor: "Investor Signal", rationale: "$2.6M pre-seed co-led by OSS Capital (open-source specialist, known for backing ProjectDiscovery, Plane, and Cal.com) and Grand Ventures. Participated in Vercel's Spring '25 Open Source Software initiative. This is the exact investor composition that successful open-source companies (MongoDB, Cloudflare) had at their earliest stages." },
     ],
   },
   {
@@ -501,7 +501,7 @@ export const investmentMemos: InvestmentMemo[] = [
     ],
     topFactors: [
       { factor: "Founder-Market Fit", rationale: "Co-founder and CEO Eric Chiu previously founded HyTrust, which secured cloud infrastructure for enterprises including Bank of America, United Healthcare, Honeywell, and U.S. Central Command (HyTrust was acquired by Entrust in 2021). Co-founder and CTO Hemma Prafullchandra served as CTO for M365 Security and Compliance at Microsoft, then as Microsoft's AI Security, Privacy and Data Residency Architect — where she helped define company-wide security requirements for all GenAI integrations and copilots." },
-      { factor: "Backer Signal", rationale: "One of the few seed-stage startups to earn recognition from all four major AI infrastructure providers — NVIDIA Inception, Google Cloud Builders, Microsoft Founders Hub, and AWS Activate. Schellman publicly endorsed the platform, providing institutional credibility rare at this stage." },
+      { factor: "Investor Signal", rationale: "One of the few seed-stage startups to earn recognition from all four major AI infrastructure providers — NVIDIA Inception, Google Cloud Builders, Microsoft Founders Hub, and AWS Activate. Schellman publicly endorsed the platform, providing institutional credibility rare at this stage." },
       { factor: "Timing & Competition", rationale: "Enterprises deploying GenAI face a compliance vacuum — existing GRC tools weren't built for model governance, prompt injection risks, or AI-specific regulatory frameworks. SolidCore is positioned to become a market leader as the AI compliance category emerges." },
     ],
   },
@@ -573,7 +573,7 @@ export const investmentMemos: InvestmentMemo[] = [
     ],
     topFactors: [
       { factor: "Founder-Market Fit", rationale: "CEO Zubin Koticha and co-founder Alexis Gauba are second-time founders — they previously built Opyn, the largest DeFi options platform ($15B+ in volume), which was acquired by Coinbase. Co-founder/CTO Ben Hylak spent four years on Apple's elite Human Interface Design team (visionOS) after avionics software engineering at SpaceX." },
-      { factor: "Backer Signal", rationale: "$15M seed led by Lightspeed Venture Partners — one of the strongest seed-stage signals in enterprise infrastructure. Angel participation from founders of Replit, Cognition (Devin), Framer, Notion, and Speak, plus Figma Ventures and Vercel Ventures." },
+      { factor: "Investor Signal", rationale: "$15M seed led by Lightspeed Venture Partners — one of the strongest seed-stage signals in enterprise infrastructure. Angel participation from founders of Replit, Cognition (Devin), Framer, Notion, and Speak, plus Figma Ventures and Vercel Ventures." },
       { factor: "Product-Market Fit", rationale: "Processing millions of events daily for frontier AI customers. Launched Raindrop Experiments — the first A/B testing platform for AI agents. SOC 2 compliant with live pricing tiers ($65–$350/mo), indicating real paying customers, not just design partners." },
     ],
   },
@@ -622,7 +622,7 @@ export const investmentMemos: InvestmentMemo[] = [
     topFactors: [
       { factor: "Founder-Market Fit", rationale: "Manish Hebbar (CEO) and Sumit Chachra (CTO) have managed $16B+ across 11 GW of power before founding CapeZero. They have lived the problem, and are creating what they wish they had." },
       { factor: "Product-Market Fit", rationale: "Third Pillar Solar serves as fantastic validation, with a report showing CapeZero's integration significantly enhanced workflow visibility and accelerated project timelines. 50%–75% speed improvement on deals is real validation." },
-      { factor: "Backer Signal", rationale: "Powerhouse Ventures is a notable energy backer, with various successes including Pearl Street Technologies (acquired by Enverus) and the scaling of Terabase Energy and Overstory." },
+      { factor: "Investor Signal", rationale: "Powerhouse Ventures is a notable energy investor, with various successes including Pearl Street Technologies (acquired by Enverus) and the scaling of Terabase Energy and Overstory." },
     ],
   },
   {

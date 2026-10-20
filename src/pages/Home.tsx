@@ -27,7 +27,7 @@ const STEPS = [
 ];
 
 const STATS = [
-  { n: String(investmentMemos.length), label: 'Company memos' },
+  { n: String(investmentMemos.length), label: 'Investment memos' },
   { n: String(posts.length), label: 'Essays' },
   { n: '22', label: 'Verticals sourced' },
   { n: '55', label: 'Proprietary sources' },

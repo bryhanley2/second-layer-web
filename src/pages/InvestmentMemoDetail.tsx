@@ -27,7 +27,7 @@ export default function InvestmentMemoDetail() {
       <header className="border-b border-rule">
         <div className="max-w-4xl mx-auto px-5 sm:px-8 pt-14 pb-12 md:pt-20">
           <Link to="/memos" className="mono text-gray-500 hover:text-accent transition-colors">
-            &larr; Company memos
+            &larr; Investment memos
           </Link>
           <p className="eyebrow mt-10 reveal">[ {memo.industry} ]</p>
           <h1
@@ -60,7 +60,7 @@ export default function InvestmentMemoDetail() {
             </div>
           ))}
           <div className="py-5 sm:col-span-3 border-t border-rule">
-            <dt className="eyebrow">Backers</dt>
+            <dt className="eyebrow">Investors</dt>
             <dd className="mt-2 text-[0.98rem]">{memo.investors}</dd>
           </div>
           {memo.website && (
