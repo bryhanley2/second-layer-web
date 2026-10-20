@@ -48,7 +48,7 @@ export default function RequestAccess() {
           <div className="border border-ink bg-paper p-8 shadow-offset">
             <p className="eyebrow">[ Request ]</p>
             <p className="font-display text-3xl leading-tight mt-3">
-              Investor, operator, or evaluating this work?
+              Founder, operator, or evaluating this work?
             </p>
             <p className="text-gray-600 mt-3 text-[0.95rem] leading-relaxed">
               Send a note and I&rsquo;ll set you up.

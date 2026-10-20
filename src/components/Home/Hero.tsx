@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const STACK = [
   { tag: 'First layer — the trend', title: 'The AI compute buildout', note: 'Everyone funds the buildout itself.' },
   { tag: 'Second layer — the problem', title: 'Interconnection queues', note: 'Years to connect new load to the grid.' },
-  { tag: 'The investment', title: 'Software that clears them', note: 'Seed-stage, asset-light, early.' },
+  { tag: 'The opportunity', title: 'Software that clears them', note: 'Seed-stage, asset-light, early.' },
 ];
 
 export default function Hero() {
@@ -29,7 +29,7 @@ export default function Hero() {
             className="mt-8 text-lg text-gray-600 leading-relaxed max-w-xl reveal"
             style={{ animationDelay: '220ms' }}
           >
-            Second Layer investing backs the companies that solve problems{' '}
+            Second Layer sourcing looks for the companies that solve problems{' '}
             <em>created by</em> a dominant trend — not the companies that{' '}
             <em>are</em> the trend. This site is the engine that finds them, and the
             thinking behind it.

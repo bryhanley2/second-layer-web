@@ -1,7 +1,7 @@
 // Display metadata shared by the memo list and detail pages.
 
 export const REC_KLASS: Record<string, string> = {
-  Invest: 'text-accent',
+  'Strong fit': 'text-accent',
   'Further Review': 'text-ink',
   Pass: 'text-gray-400',
 };

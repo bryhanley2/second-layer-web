@@ -19,7 +19,7 @@ export interface InvestmentMemo {
   date: string;
   readingTime: string;
   tags: string[];
-  recommendation: "Pass" | "Further Review" | "Invest";
+  recommendation: "Pass" | "Further Review" | "Strong fit";
   content: string[];
   topFactors: TopFactor[];
 }
@@ -39,7 +39,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["HealthTech", "AI", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Coronary artery disease (CAD) is the leading cause of death in the US, killing an estimated 375,000 Americans every year. Diagnosing it remains a critical issue — coronary CT angiography and catheterization labs are expensive and geographically concentrated. Primary care physicians struggle to distinguish milder heart issues from critical CAD, leading to misdiagnoses where patients with active disease aren't treated fast enough and patients without disease are over-referred for costly treatments. HEARTio provides AI-powered software layered on top of existing ECG infrastructure to detect coronary artery disease on a per-vessel basis with clinical accuracy over 90%, pinpointing which specific arteries are blocked in just 30 seconds. With FDA Breakthrough Device Designation, two peer-reviewed publications, and 16,000+ patient cross-validation, HEARTio is a cost-effective, proven solution to one of America's biggest problems.",
     ],
@@ -63,7 +63,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["HealthTech", "AI", "Pre-seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "There has been a consolidation of the US healthcare system — the share of physicians in independent practices fell from 60% in 2012 to under 25% today. Nurse practitioners are the fastest-growing clinical workforce in the country, but burnout in major health systems is very common, often due to a misalignment between preferred and mandatory working hours. Kinstead Health is an AI-native platform that helps nurse practitioners (NPs) launch and grow independent practices. They handle setup, scheduling, documentation, billing, credentialing, compliance, and growth all under a single umbrella, taking NPs from idea to practice in 90 days or less.",
     ],
@@ -87,7 +87,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["HealthTech", "AI", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Medicare Advantage covers over 50% of all Medicare beneficiaries — more than 31 million Americans. While designed to handle care more efficiently than traditional Medicare, the plans have produced an explosion of authorization requests, claim denials, and administrative friction. The largest payers deny roughly one in five prior authorization requests, and most beneficiaries simply give up rather than appeal — meaning many Americans don't receive care their plans should theoretically cover. Understood Care provides AI-native Medicare patient advocacy, helping beneficiaries navigate Medicare Advantage plans, file appeals, manage authorizations, and coordinate care across multiple providers. New 2024 CMS billing codes allow patient advocacy to be billed directly to Medicare for the first time — Understood Care was built specifically around these codes, establishing a strong, defensible moat as the first venture-backed entrant.",
     ],
@@ -111,7 +111,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["FinTech", "AI", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "As global finance becomes more integrated across neobanks, payment processors, and crypto firms, the demand for financial compliance has grown substantially. New financial technology applications need anti-money laundering (AML) platforms on day one, especially as AI exacerbates the threat of cybercrime and fraud. Flagright provides real-time transaction monitoring, AML screening, and case management through an API-first, AI-native platform that integrates in weeks, not months. The speed of integration provides a significant moat in a market that continues to grow rapidly.",
     ],
@@ -135,7 +135,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["FinTech", "AI", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Parcha fits the Second Layer thesis directly — as fintech continues to scale globally, so does the need for compliance standards within these companies. Parcha builds AI agents that sit inside compliance workflows, automating document review, risk management, and decision-making to empower compliance teams. Unlike competitors (most notably WorkFusion), Parcha provides operational AI agents that support speed and accessibility for compliance teams. Their UX is simple and modern, making it easy for compliance teams to integrate and manage these agents within existing systems.",
     ],
@@ -159,7 +159,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["FinTech", "Compliance", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Themis focuses on a different Second Layer dynamic — the rise of banking-as-a-service and the need for network management as banks begin to sponsor numerous fintech platforms. Managing the web of relationships between banks and fintech platforms with pre-existing solutions is unsustainable today. While competitors focus on bank-fintech compliance relationships from one side, Themis has built a shared workspace for both sides to operate simultaneously.",
     ],
@@ -183,7 +183,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["AI Infrastructure", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Founded in 2024 by Alex Salazar and Sam Partee, Arcade AI is a tool-calling and authentication infrastructure platform for AI agents. AI agents need to call external tools — sending emails, querying databases, reading calendars, hitting APIs — but each of these activities requires secure authentication, permission scoping, and token management. AI agents constantly run into bottlenecks across these areas, inhibiting workflows. Arcade AI builds the layer that handles this, giving agents pre-built connections to dozens of services alongside a Software Development Kit.",
     ],
@@ -207,7 +207,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["AI Infrastructure", "HealthTech", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Trellis AI automates healthcare paperwork and prior authorization workflows for providers. It builds AI agents that process unstructured clinical documents — referrals, medical charts, insurance guidelines, appeals — converting them into structured data directly integrated into Electronic Health Record systems. By streamlining these processes, time-to-treatment is significantly reduced, allowing patients to be treated more quickly while allowing health centers to handle a higher volume of patients. The U.S. spends over a trillion dollars a year on administrative healthcare costs, delaying care, draining provider revenue, and driving staff burnout. By reducing time-to-treatment by over 90%, Trellis is tackling one of the most substantial problems facing American families today.",
     ],
@@ -231,7 +231,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["AI Infrastructure", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Maxim AI is an end-to-end evaluation and observability platform for enterprise AI agents and LLM applications. Most enterprises managing LLM applications use an observability tool or an evaluation framework separately — Maxim was developed as a unified solution, targeting teams that have adopted AI implementation at scale and need their systems evaluated for quality assurance. Maxim covers pre-deployment (testing LLMs before production), post-deployment (live monitoring, tracing, observation), and quality assurance (evaluation of outputs to detect failures throughout the complete lifecycle), bridging the gap between observability and evaluation in a single platform.",
     ],
@@ -255,7 +255,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["SpaceTech", "Late Stage"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "There are over 11,000 satellites in orbit. When data travels across a satellite constellation, it must move across these satellites traveling at 17,000+ mph in different directions, often facing weather disruptions, atmospheric interference, and shifting military priorities. Aalyria provides a network orchestration platform — Spacetime — that reconfigures an internet constellation's antennas to the path of least resistance, ensuring critical data is routed for priority missions even under disruption. Originally built inside Google's Project Loon and spun out as an independent company, Spacetime is now used across government defense, commercial satellite, and aerospace operators.",
     ],
@@ -279,7 +279,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["SpaceTech", "Series A"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Mega-constellation proliferation — the rapid deployment of hundreds to thousands of small, low-cost satellites in Low Earth Orbit — has created severe orbital congestion. With more than 11,000 active satellites and millions of pieces of debris, the risk of collision has become a structural problem no single operator can solve alone. Privateer Space provides real-time debris and collision-risk visualization through Wayfinder, which functions as the Google Maps of space. The platform enables space object tracking, anomaly detection, and space traffic management for commercial and government clients, building the navigational infrastructure required for the next generation of satellite operators to coexist in increasingly congested orbits.",
     ],
@@ -303,7 +303,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["SpaceTech", "Series A"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Satellites are expensive — each costs millions to design, launch, and operate — but they are designed for single use. Once fuel runs out, even functional satellites become space debris. As satellite constellations have grown, the cost of replacing satellites has come to exceed the cost of extending their lives, creating a structural inefficiency at the heart of the modern space economy. Orbit Fab is building the in-space propellant supply chain through RAFTI, a refueling interface with built-in cooperative docking capability. RAFTI eliminates single-use spacecraft by enabling on-orbit refueling — getting satellites to orbit faster, allowing them to do more while there, and reducing the weight associated with traditional fill and drain components.",
     ],
@@ -327,7 +327,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["SpaceTech", "Late Stage"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Satellite proliferation has created the infrastructure that enables detection of radio frequency signals from orbit. Vessels that disable their AIS (Automatic Identification System) transponders to evade detection — for illegal fishing, sanctions evasion, smuggling, or other illicit maritime activity — were effectively invisible to governments and security organizations. Conventional surveillance tools require weather cooperation, daylight, or physical proximity that maritime jurisdictions cannot reliably provide. Unseenlabs operates a constellation of shoe-box-sized satellites that detect ships through their radio frequency emissions — even when transponders are disabled — enabling governments, defense agencies, and maritime authorities to geolocate any vessel at sea regardless of whether it wants to be found, in any weather, day or night.",
     ],
@@ -351,7 +351,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["Energy & Climate", "AI", "Series A"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Paces is an AI-powered software platform that helps clean energy and data center developers locate the best sites for new projects. The platform integrates zoning, interconnection, environmental, and permitting data on individual land parcels, and provides a Permitting Predictor that uses zoning and regulatory data to forecast permitting risk across different jurisdictions. This compresses months of manual due diligence into minutes — significant diligence hurdles that prevent and delay essential projects from taking off in the first place. Led by James McWalter (employee #1 at a Google-acquired AI startup) and Charles Bai (led AI efficiency and sustainability at Meta), the team includes engineers from Meta AI, DeepMind, Tesla, TotalEnergies, Con Edison, and GE — a balance between leading tech and energy companies rare for an early-stage startup.",
     ],
@@ -375,7 +375,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["Energy & Climate", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Reunion Infrastructure is a marketplace and compliance platform for transferable clean energy tax credits under the Inflation Reduction Act — the first company to build a digital marketplace for the trade of clean energy tax credits. Financing has long been a challenge for renewable energy projects, including solar, battery storage, and geothermal. By supporting every step of the transaction process, from identifying opportunities to providing market data and contract negotiation, Reunion helps renewable energy projects get done. The company has overseen the exchange of over $7 billion in tax credit transfers across 100+ deals since 2024, with an average close time of under 45 days from term sheet to signing, and over 95% of signed term sheet deals closing on the platform. Led by Andy Moon and Billy Lee, both of whom spent careers in solar tax equity and project finance before starting Reunion.",
     ],
@@ -399,7 +399,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["Energy & Climate", "Series A"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Voltpost is revolutionizing EV charging stations by retrofitting existing city-owned lamp posts into curbside EV charging stations. The modular unit attaches to a lamp post's existing electrical supply without new trenching, new conduits, or new permits for underground work. Chargers can be accessed across public/private lamp posts via an intuitive mobile app that provides nearby Voltpost chargers, charging session tracking, and payment management. Cities have millions of lamp posts already connected to the grid, unused for 10-12 hours every night. Voltpost provides a use for these lamp posts while addressing the EV charger supply shortage that has not kept up with EV demand. Despite their early stage, partnerships have been established with AT&T, Eversource, Zipcar, and ComEd.",
     ],
@@ -423,7 +423,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["Consumer", "Pre-seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "DEFI Snacks is a functional protein chocolate brand offering 25-26g of protein per bag in premium chocolate (70% cacao dark from the Dominican Republic and Ecuador, 38% cacao milk from Peru). The product uses casein protein, whey protein crisps, and sprouted buckwheat — a daily staple in Ukraine and inspired by founder Tatyana Jones's heritage — with no artificial sweeteners or sugar replacements. DEFI is disrupting the $22 billion US chocolate category with a better-for-you alternative that doesn't sacrifice indulgence. Founded by Tatyana Jones, an NYU Stern MBA who spent nearly 15 years as a marketing executive at Mars (managing the DOVE Chocolate P&L), GSK (Theraflu), Bausch + Lomb, and Johnson & Johnson. The product was co-developed with Chef Jean-François Bonnet, who previously formulated Hu Chocolate's early recipes (Hu was acquired by Mondelēz). DEFI has scaled to 1,200 stores in under 18 months, was featured on Good Morning America, and donates 1% of profits to initiatives supporting female-led companies.",
     ],
@@ -447,9 +447,9 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["Cybersecurity", "AI", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
-      "Backline automates vulnerability remediation. Security scanners find thousands of issues, but fixing them is still manual, slow, and siloed between security and engineering. Backline takes those findings and generates validated, context-aware fixes end-to-end, closing the gap between detection and resolution. In 2024 alone, over 40,000 new CVEs were reported — roughly one every 13 minutes. As AI-driven development accelerates code output and attack surfaces expand, the bottleneck is no longer detection — it's fixing. Backline has signs of early revenue, with enterprise integration in the works. Most current tools are focused on prioritization of vulnerabilities, while Backline is actually remediating them. $9M is very lean for a seed round with that strong of a founding team, which could make for a reasonable Series A investment in the near future.",
+      "Backline automates vulnerability remediation. Security scanners find thousands of issues, but fixing them is still manual, slow, and siloed between security and engineering. Backline takes those findings and generates validated, context-aware fixes end-to-end, closing the gap between detection and resolution. In 2024 alone, over 40,000 new CVEs were reported — roughly one every 13 minutes. As AI-driven development accelerates code output and attack surfaces expand, the bottleneck is no longer detection — it's fixing. Backline has signs of early revenue, with enterprise integration in the works. Most current tools are focused on prioritization of vulnerabilities, while Backline is actually remediating them. $9M is very lean for a seed round with that strong of a founding team, which could make for a reasonable Series A candidate in the near future.",
     ],
     topFactors: [
       { factor: "Founder-Market Fit", rationale: "CEO Maor Goldberg is a serial cybersecurity entrepreneur with two prior exits — Whitebox Security (acquired by SailPoint, 2015) and Apolicy (acquired by Sysdig, 2021). Co-founders Eran Leib (CCO) and Aviad Chen (VP R&D) have worked alongside Goldberg for 25+ years. This is their third startup together — rare co-founder continuity that signals deep trust and execution chemistry." },
@@ -471,7 +471,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["Cybersecurity", "Open Source", "Pre-seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Comp AI is an open-source Governance, Risk, and Compliance (GRC) platform covering SOC 2, ISO 27001, and HIPAA, serving as effectively the open-source alternative to more rigid, closed-source providers. In doing so, they cut compliance costs by roughly 10x while giving teams full control over their workflows. GRC compliance is a $40B+ market currently dominated by closed platforms charging $20-50K+ per year and locking customers into rigid workflows. As AI companies and startups face compliance requirements earlier in their lifecycle, the market needs an open-source, AI-native alternative that scales with the company rather than acting as a tax on it. The GRC market continues to compound substantially, and I have seen firsthand the cost compliance can have on an industry through my work within pharmaceutical compliance. 3,500+ companies in pre-launch testing with early signs of significant efficiencies across first adopters suggest the open-source approach is converting at scale, positioning Comp AI to take meaningful share from incumbents who have grown rigid and overpriced.",
     ],
@@ -495,7 +495,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["Cybersecurity", "AI", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "SolidCore is an AI-specific governance and compliance platform. Existing GRC tools weren't built for model governance, prompt injection risks, or frameworks like the EU AI Act and NIST AI RMF. SolidCore bridges traditional compliance with the new AI-specific regulatory requirements that every enterprise will need to meet. As AI-regulatory standards evolve, the need to consider these requirements alongside traditional compliance standards is growing in importance. The AI compliance market is emerging quickly, and SolidCore is seeking to become a market leader. Their endorsement by Schellman (a leading compliance provider and the first ANAB-accredited ISO 42001 certification body) indicates signs of early adoption and recognition that could strengthen their network and growth.",
     ],
@@ -519,7 +519,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["AI Infrastructure", "Networking", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Byteport is building network infrastructure purpose-built for machines, not humans. As robotics fleets, satellite constellations, and edge AI scale, they need networking designed for real-time machine-to-machine coordination. Traditional networking was built for humans browsing the web, not for machines coordinating in real-time across distributed environments. Byteport is building the network layer for the machine-to-machine economy. AI, robotics, and satellite systems need reliable data transfer, and Byteport is leading the charge. Traditional competitors are not AI-optimized, and as demand for critical infrastructure for AI systems increases, so does the need for a system like Byteport. As a YC-backed team, Byteport demonstrates a lean structure and high capital efficiency at the earliest stage.",
     ],
@@ -543,7 +543,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["AI Infrastructure", "Energy", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Squid is AI-powered grid planning for energy utilities. Data centers need 3-5x more power by 2030, but grid interconnection studies still take 12-18 months using manual processes. Every new data center, EV charging network, and renewable installation requires grid interconnection studies that are major bottlenecks to growth. Squid uses AI to compress this timeline, directly enabling the infrastructure buildout that AI itself depends on. Squid is seeking to make an impact in a space in need of a major revamp considering the energy needs of AI cooling systems. The energy grid modernization market is over $100 billion and will continue to grow substantially. YC funding is a strong signal while demonstrating they are a lean founding team.",
     ],
@@ -567,9 +567,9 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["AI Infrastructure", "Observability", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
-      "Raindrop is an AI agent observability and monitoring platform — effectively 'Sentry for AI agents.' It detects silent failures in AI agents running in production: hallucinations, intent drift, agents stuck in loops, broken tool calls, and user frustration patterns that traditional monitoring tools (Datadog, Sentry) can't catch because they were built for deterministic software, not stochastic AI systems. AI agents are moving from experimental demos to production-critical systems across healthcare, finance, and customer operations. As every company becomes an 'agent company,' the monitoring layer for AI-native software becomes essential infrastructure. With a strong prior exit to Coinbase, the founding team has strong financial runway. Though it's a relatively pricy seed-stage investment, it presents a strong potential co-investment opportunity given the network and advisory a strong infrastructure-focused fund could provide. As agents move from piloting to production across major industries, the need for stochastic failure detection is significant — current incumbents simply aren't built to address it.",
+      "Raindrop is an AI agent observability and monitoring platform — effectively 'Sentry for AI agents.' It detects silent failures in AI agents running in production: hallucinations, intent drift, agents stuck in loops, broken tool calls, and user frustration patterns that traditional monitoring tools (Datadog, Sentry) can't catch because they were built for deterministic software, not stochastic AI systems. AI agents are moving from experimental demos to production-critical systems across healthcare, finance, and customer operations. As every company becomes an 'agent company,' the monitoring layer for AI-native software becomes essential infrastructure. With a strong prior exit to Coinbase, the founding team has strong financial runway. Though it's a relatively pricy seed-stage round, it presents a strong potential partnership opportunity given the network and advisory a strong infrastructure-focused fund could provide. As agents move from piloting to production across major industries, the need for stochastic failure detection is significant — current incumbents simply aren't built to address it.",
     ],
     topFactors: [
       { factor: "Founder-Market Fit", rationale: "CEO Zubin Koticha and co-founder Alexis Gauba are second-time founders — they previously built Opyn, the largest DeFi options platform ($15B+ in volume), which was acquired by Coinbase. Co-founder/CTO Ben Hylak spent four years on Apple's elite Human Interface Design team (visionOS) after avionics software engineering at SpaceX." },
@@ -591,14 +591,14 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["AI Infrastructure", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Cooling systems represent upwards of 40% of a data center's total electricity consumption. Glacian Technologies helps data centers reduce their cooling power consumption by fusing physics-based thermodynamic models with AI/ML optimization, without adding additional hardware. By referencing climate and economic data (electricity prices and ambient temperature), Glacian adjusts cooling in real time. Glacian has already been implemented into Alerify, a data center in Harrisburg, Pennsylvania, with a peer-reviewed study demonstrating a 25% reduction in cooling energy use. Spun out of Penn State College of Engineering, Glacian has secured $8M+ in non-dilutive foundational research grants.",
     ],
     topFactors: [
       { factor: "Founder-Market Fit", rationale: "Dr. Wangda Zuo (CTO) brings 10+ years of domain-specific research in data center cooling and building energy models. Dr. Jie Zhao (President), a successful serial entrepreneur and Carnegie Mellon PhD, brings 15+ years in commercializing research. Great commercial/research blend." },
       { factor: "Technical Differentiation", rationale: "Physics-informed reinforcement learning (as opposed to the pure machine-learning focus of competitors) has enabled an impressive 25% reduction in data center cooling energy." },
-      { factor: "Capital Efficiency", rationale: "$150K in angel funding for their demonstrated traction is very impressive. Additionally, $8M in non-dilutive research grants is very favorable for seed-stage investors." },
+      { factor: "Capital Efficiency", rationale: "$150K in angel funding for their demonstrated traction is very impressive. Additionally, $8M in non-dilutive research grants is very favorable for seed-stage backers." },
     ],
   },
   {
@@ -615,9 +615,9 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["AI Infrastructure", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
-      "Mapping out the financials of clean energy projects has traditionally proven significantly burdensome, contributing to the high likelihood of these projects failing. Sparked by a desire to preserve a healthy planet for future generations, Manish Hebbar and Sumit Chachra launched CapeZero to help finance and development teams better understand the feasibility of their clean energy projects, regardless of how early or late they are in the process. Despite its early stage, CapeZero has already partnered with Third Pillar Solar, a major renewable energy developer funded by Glentra Capital. In just 6 months, Third Pillar Solar has reported significant workflow enhancements as a result of CapeZero's integration, making it easier for their project managers, investors, and finance team to both evaluate and communicate regarding new infrastructure opportunities.",
+      "Mapping out the financials of clean energy projects has traditionally proven significantly burdensome, contributing to the high likelihood of these projects failing. Sparked by a desire to preserve a healthy planet for future generations, Manish Hebbar and Sumit Chachra launched CapeZero to help finance and development teams better understand the feasibility of their clean energy projects, regardless of how early or late they are in the process. Despite its early stage, CapeZero has already partnered with Third Pillar Solar, a major renewable energy developer funded by Glentra Capital. In just 6 months, Third Pillar Solar has reported significant workflow enhancements as a result of CapeZero's integration, making it easier for their project managers, backers, and finance team to both evaluate and communicate regarding new infrastructure opportunities.",
     ],
     topFactors: [
       { factor: "Founder-Market Fit", rationale: "Manish Hebbar (CEO) and Sumit Chachra (CTO) have managed $16B+ across 11 GW of power before founding CapeZero. They have lived the problem, and are creating what they wish they had." },
@@ -639,7 +639,7 @@ export const investmentMemos: InvestmentMemo[] = [
     date: "2025-01-01",
     readingTime: "3 min read",
     tags: ["AI Infrastructure", "Seed"],
-    recommendation: "Invest",
+    recommendation: "Strong fit",
     content: [
       "Aravolta provides unified data center software to optimize power and cooling efficiency designed for AI-era GPU-dense facilities. While most data center operators run separate tools for building management, power monitoring, Supervisory Control and Data Acquisition, network operations, and asset tracking, Aravolta provides them all under a single lightweight utility node. This allows operators to view the different components of data center operations under a single roof. As an API-first platform, Aravolta eliminates the need for per-point pricing through the use of pre-built device templates, enabling the onboarding of building, electrical, and IT assets in as little as a few hours.",
     ],
