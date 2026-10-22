@@ -29,14 +29,14 @@ export default function About() {
             trade partners navigate the complexities of conformance.
           </p>
           <p>
-            Additionally, I recently began a Venture Capital Residency with Geek Ventures.
+            Additionally, Bryan recently began a Venture Capital Residency with Geek Ventures.
             Geek Ventures is an early-stage venture capital fund that invests in bold,
             innovative immigrant entrepreneurs building scalable technology companies in the
             U.S. The fund focuses on backing exceptional technical founders and helping them
             navigate the U.S. venture ecosystem.
           </p>
           <p>
-            As a Venture Capital Resident, my responsibilities include sourcing and
+            As a Venture Capital Resident, his responsibilities include sourcing and
             evaluating investment opportunities, technical due diligence, supporting
             portfolio companies in their GTM strategy and operations, and assisting with
             community events and outreach.
