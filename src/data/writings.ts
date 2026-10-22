@@ -10,6 +10,61 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "the-outsized-success-of-immigrant-founders",
+    title: "The Outsized Success of Immigrant Founders",
+    excerpt: "The success of immigrant founders in the United States is remarkable - here, I document just how sizable that is, and explore why this may be the case.",
+    date: "2026-10-19",
+    readingTime: "4 min",
+    tags: ["venture capital", "immigrant founders", "Geek Ventures", "founder success"],
+    content: [
+      "As I make a few adjustments to my sourcing pipeline after my Venture Institute experience, I want to return to exploring how certain factors affect long-term founder success. However, unlike what I’ve explored previously, this factor isn’t a technical attribute, a particular skillset, an alma mater, or a past company (PayPal Mafia). Instead, I want to focus on a different criterion: whether or not a founder is an immigrant.",
+      "Immigrants are the backbone of the American infrastructure we have relied upon for centuries. Without Chinese immigrants in the mid-to-late 19th century, there would be no Transcontinental Railroad. Without Italian and Eastern European immigrants, NYC wouldn’t have the most extensive subway system in the country. And without Irish Immigrants, there would be no Erie Canal, serving the economic and logistical challenges of goods transportation across the Midwest (the list goes on and on). This sense of sacrifice, commitment, and high work ethic is also evident today, especially across the United States’ founder ecosystem.",
+      "The Immigrant Factor:",
+      "The correlation is considerable. Not only do immigrants proportionally start more companies, but the odds of an immigrant founder starting a unicorn remain statistically higher as well. Despite constituting just 14% of the US population, immigrants start over 24% of all businesses across the United States, a number which has grown steadily from 18.7% in 2007 (Kerr & Kerr, 2020, 2024). Often leaving behind friends and family, while adopting a new cultural way of life, immigrants bring a particular sense of passion, dedication, and commitment - an argument only strengthened when considering the representation of immigrants across all U.S. unicorns.",
+      "59% of all unicorns (or, more specifically, 455 of 775) have at least one immigrant founder; when considering the US born percentage of immigrants, this number is closer to ⅔. Those 455 unicorns account for roughly $5 trillion in equity value, and include some of the most notable startups ever launched: OpenAI, SpaceX, Databricks, Stripe, and NVIDIA. This comes as immigrants face substantial burdens when traveling and assimilating to the United States: according to Manan Mehta of Unshackled Ventures, visa restrictions, less accessible family and friends rounds, smaller networks, and a lack of connection to local universities, employers, and startup ecosystems (Nye and Johannessen, 2026).",
+      "The Value of Mixed Teams:",
+      "One of the more interesting statistics about the role of immigrants in the startup ecosystem is the value of “mixed teams”, categorized as teams in which one co-founder is an immigrant and another is a native citizen. Mixed teams are 35% more likely to receive funding than native-only startups, and are all 44% larger in size. While one can consider the many advantages of mixed teams and how complementary and diverse backgrounds enhance the likelihood of success (which is certainly defensible), the other side of the argument must be highlighted, too: it’s much harder for immigrant-only teams to receive funding in the United States.",
+      "Considering the potential of aspiring immigrant founders and the difficulties they face in raising capital, it makes me especially proud to announce that I can help change the narrative. Following my graduation from the Venture Institute, I have recently accepted an offer to join Geek Ventures as a Venture Capital Resident.",
+      "Geek Ventures - Investing in the Opportunity:",
+      "Geek Ventures in a NYC-based pre-seed and seed-stage venture capital firm investing in immigrant founders and supporting them in their transition to the United States startup ecosystem. Geek Ventures goes beyond providing capital alone, connecting immigrant-born founders to U.S. investors and funds, while supporting them with future fundraising efforts. Managing Partner and Founder, Ihar Mahaniok, is an immigrant with over 20 years of AI/ML engineering experience, who founded Geek after seeing the additional burdens immigrants face when building a company in the United States.",
+      "After a $23 million Fund 1 closed in June of 2023, Geek Ventures has invested in over 50 companies across AI, B2B SaaS, B2C Software, Hardware, and deeptech, including ZeroDrift, Cytronic, Wokelo, and Decile Group. The opportunity to help grow the portfolio and support immigrant founders is one I’m very excited about, and I look forward to discussing more about my experience across this platform. As always, if you’re interested in learning more about Geek Ventures (either as a founder or as an aspiring VC), feel free to send me a message or leave a comment.",
+      "References:",
+      "Kerr, S. P., & Kerr, W. R. (2024). Immigrant entrepreneurship in America: Growth trajectories and economic impact (Working Paper No. 32000). National Bureau of Economic Research. nber.org",
+      "Kerr, S. P., & Kerr, W. R. (2020). Immigrant entrepreneurship in America: Evidence from the Survey of Business Owners 2007 & 2012. Journal of Economics & Management Strategy, 29(2), 203–224. doi.org",
+      "Nye, M., & Johannessen, I. (2026, August 13). The VC backing the American dream. TechCrunch. https://techcrunch.com/podcast/the-vc-backing-the-american-dream/",
+      "Note: The views expressed in this article are my own and are intended for informational purposes only. Nothing here constitutes financial or investment advice. Venture capital involves significant risk, and all investment decisions should be made in consultation with a qualified financial professional."
+    ]
+  },
+  {
+    slug: "my-experience-in-the-venture-institute-program",
+    title: "My Experience in the Venture Institute Program",
+    excerpt: "My thoughts on the structure and curriculum, key takeaways, and who I believe it’s best suited for. A bit different from my usual work, but thoughts certainly worth sharing.",
+    date: "2026-09-18",
+    readingTime: "4 min",
+    tags: ["venture institute", "venture capital", "education", "Decile Hub"],
+    content: [
+      "This week’s post is a little bit different.",
+      "Earlier this week, I submitted my final assignment of the Venture Institute: a 9-week venture capital training program, providing people of all ages, backgrounds, and ethnicities the tools and resources to understand an industry many consider gatekept, exclusive, and mysterious. The program was rigorous, comprehensive, and highly experiential (hence my slowdown in long-form posts), but also so invaluable that I feel compelled to share more about it with you all.",
+      "I discovered the program earlier this year when an alumna and current VC investor discussed her experience with the program. The part-time, fully online format of the program appealed to me: I could pursue this experience while working full-time at my startup, and meet people from all around the world. The program was and remains entirely free, while providing users access to Decile Hub, the technology over 60% of new fund managers now use to launch their own VC funds.",
+      "Oddly enough, it was a single question that led to my interest in the venture capital industry: what if I could spot the difference between a success and a failure before anyone else? Short answer: Likely not possible, but so are most extraordinary things.",
+      "I had developed a rudimentary understanding of venture capital primarily through reading Venture Deals by Brad Feld and Jason Mendelson, along with other online resources. However, the Venture Institute accelerated this understanding to new heights, challenging me not to just learn but also do.",
+      "It challenged me not just to think about the power law, but to model what it might look like across a 10-year, $10 million seed fund. Not just what constitutes a deal memo, but how to turn a founder interview, pitch deck, and deep-dive on a startup into one a VC might actually read. Not just how a thesis is structured, but how to build one while convincing others that it might be worth investing in.",
+      "The program is structured in a way that’s built for anyone from anywhere. However, it’s certainly not meant for everyone. The program demands a lot, and many cohort members are dropped from the program midway through it due to incompletion. 15-20 hours a week is expected, and some of the assignments presented a significant challenge. There were certainly times when I felt challenged, but I’d rather be challenged than bored. And bored I never was.",
+      "Graduating from Babson just about 2 years ago, I miss what it felt like to learn as part of a cohort. That feeling of pushing through assignments (and struggling at times) was a feeling I missed - which might sound a little weird to hear, but couldn’t be more true. Coming out on the other side of this experience is one I’m proud of, but more importantly, an experience I’m grateful for.",
+      "Some highlights of my 9-week experience, alongside the many connections I bridged with industry leaders, program alumni, and other cohort members:",
+      "• Learned about the fundamentals of venture economics, including management fees, carry, TVPI, MOIC, and the power law, modeling these metrics across a hypothetical seed-stage fund.",
+      "• Built a condensed, refined thesis focused on U.S. seed-stage AI Infrastructure software, sourcing and evaluating deals in alignment with this thesis.",
+      "• Developed an extensive data room centered on AI Infrastructure software, including top funds, notable startup exits, supply and demand shifts, as well as company",
+      "• Spoke with the founder of Glacian Technologies, which provides a physics-based approach to reduce data-center energy consumption within cooling systems, and developed a 20-page deal memo using Decile Hub Technology.",
+      "• Learned the ins and outs of investor/LP outreach and understood how general non-solicitation makes this part tricky.",
+      "• Enhanced my AI-driven startup sourcing and evaluation platform with the help of Claude Code, adding a scraping layer and a web application to present the value to fellow cohort members and the greater VC Community.",
+      "Full transparency: few things in life are free and feel like they shouldn’t be. This was one of those things. The in-depth curriculum, access to top VC fund management technology in Decile Hub, and relationships stemming from it felt world-class. I couldn’t be more thankful and humbled to graduate, and I couldn’t recommend the program enough to those who are ready to test their limits.",
+      "For those of you thinking about taking the next steps, I’ll be real: it will challenge you. But if you are excited about learning the fundamentals of VC, and willing to invest the time and energy, I couldn’t recommend the Venture Institute enough. Applications for the 8th cohort are now open!",
+      "Thank you to the Decile Hub team for such an amazing 9 weeks. I will be sharing more updates soon. Always happy to answer any questions you may have about the program.",
+      "Note: The views expressed in this article are my own and are intended for informational purposes only. Nothing here constitutes financial or investment advice. Venture capital involves significant risk, and all investment decisions should be made in consultation with a qualified financial professional."
+    ]
+  },
+  {
     slug: "why-venture-capital-doesnt-make-sense-for-most",
     title: "Why Venture Capital Doesn't Make Sense... For Most",
     excerpt: "The Facebooks and Amazons of the world are not common. Here, I explore the reality of venture investing — and why it might not be the best choice for most investors.",
